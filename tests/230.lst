@@ -1,0 +1,12 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  2 10:05:31 2010
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no230;
+    2|const month=12;
+    3|begin    
+    4|  while true do;
+    5|  write(month);
+    6|end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

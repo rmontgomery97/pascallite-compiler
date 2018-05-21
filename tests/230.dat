@@ -1,0 +1,6 @@
+program stage2no230;
+const month=12;
+begin    
+  while true do;
+  write(month);
+end.

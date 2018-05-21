@@ -1,0 +1,16 @@
+program stage2no223;
+var a, month, year:integer;
+begin    
+  read(month,year);
+  if (month = 1) or (month = 2) then
+    begin
+      a := month + 10;
+      year := year - 1;
+    end;
+  else
+    begin
+      a := month - 2;
+      year := year + 1;
+    end;
+  write(a,month,year);
+end.

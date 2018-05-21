@@ -1,0 +1,28 @@
+STRT  NOP          stage2no202 - Your Names(s)
+      RDI I0       read(y)
+L0    NOP          while
+      LDA I0       
+      ISB I2       y < 10
+      AMJ L1       
+      LDA FALS     
+      UNJ L1  +1   
+L1    LDA TRUE     
+      AZJ L2       do
+      LDA I0       
+      IAD I3       y + 1
+      STA I0       y := T0
+      UNJ L0       end while
+L2    NOP          
+      LDA I0       
+      IAD I3       y + 1
+      STA I1       z := T0
+      PRI I0       write(y)
+      PRI I1       write(z)
+      HLT          
+I0    BSS 0001     y
+I1    BSS 0001     z
+I2    DEC 0010     10
+FALS  DEC 0000     FALSE
+TRUE  DEC 0001     TRUE
+I3    DEC 0001     1
+      END STRT     

@@ -1,0 +1,14 @@
+program stage2no204;
+  var w,x,y,z:integer; a,b,c:integer;
+  begin
+    a := -1;
+    read(w);
+    read(x);
+    read(y);
+    read(z);
+    read(b);
+    read(c);
+    if ((x<y) and (w=z)) then
+      a := b*c;
+    write(a);
+  end.

@@ -1,0 +1,8 @@
+program stage2no229;
+var a:integer;
+begin    
+  a := 0;
+  while a do {predicate of while must be of type boolean}
+    a := 1;
+  write(a);
+end.

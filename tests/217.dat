@@ -1,0 +1,22 @@
+program stage2no217;
+  var x,y,a,b:integer;
+      c,d:integer;
+  begin
+    read(x);
+    read(a);
+    read(y);
+    read(b);
+    if x > a then
+      begin
+        if (y < b) then
+          begin
+            c:=a+b;
+            d:=y+2;
+          end;
+      end;
+    else
+      c:=1;
+    d:=y+3;
+    write(c);
+    write(d);
+end.

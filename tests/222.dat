@@ -1,0 +1,12 @@
+program stage2no222;
+var a,b,c,d,e:integer;
+    f:boolean;
+begin    
+  read(b,c,d,e);
+  f := a < b;
+  if f then
+    a:=(b+c)+((c+d)+((d+e))) ;    
+  else
+    b:= a+c;
+  write(a,b,c,d,e,f);
+end.

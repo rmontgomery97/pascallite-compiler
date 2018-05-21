@@ -1,0 +1,42 @@
+STRT  NOP          stage2no204 - Your Names(s)
+      LDA I7       
+      STA I4       a := -1
+      RDI I0       read(w)
+      RDI I1       read(x)
+      RDI I2       read(y)
+      RDI I3       read(z)
+      RDI I5       read(b)
+      RDI I6       read(c)
+      LDA I1       
+      ISB I2       x < y
+      AMJ L0       
+      LDA FALS     
+      UNJ L0  +1   
+L0    LDA TRUE     
+      STA T0       deassign AReg
+      LDA I0       
+      ISB I3       w = z
+      AZJ L1       
+      LDA FALS     
+      UNJ L1  +1   
+L1    LDA TRUE     
+      IMU T0       T0 and T1
+      AZJ L2       if false jump to L2
+      LDA I5       
+      IMU I6       b * c
+      STA I4       a := T0
+L2    NOP          end if
+      PRI I4       write(a)
+      HLT          
+I0    BSS 0001     w
+I1    BSS 0001     x
+I2    BSS 0001     y
+I3    BSS 0001     z
+I4    BSS 0001     a
+I5    BSS 0001     b
+I6    BSS 0001     c
+I7    DEC -001     -1
+FALS  DEC 0000     FALSE
+TRUE  DEC 0001     TRUE
+T0    BSS 0001     T0
+      END STRT     

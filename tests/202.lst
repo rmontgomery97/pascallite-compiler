@@ -1,0 +1,16 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  3 09:08:51 2009
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no202;
+    2|  var y,z:integer;
+    3|  begin
+    4|    read(y);
+    5|    while (y < 10) do
+    6|      y:=y+1;
+    7|    z:=y+1;
+    8|    write(y);
+    9|    write(z);
+   10|  end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

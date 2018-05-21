@@ -1,0 +1,6 @@
+program stage2no234;
+begin    
+  repeat
+    ;
+  until true;
+end.

@@ -1,0 +1,28 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  2 10:05:31 2010
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no218;
+    2|var
+    3|  a, b, c : integer;
+    4|begin
+    5|  read(a, b, c);
+    6|  if (a < b) then
+    7|    if (b < c) then
+    8|      write(a, b, c);
+    9|    else
+   10|      if (a < c) then
+   11|        write(a, c, b);
+   12|      else
+   13|        write(c, a, b);
+   14|  else
+   15|    if (a < c) then
+   16|      write(b, a, c);
+   17|    else
+   18|      if (b < c) then
+   19|        write(b, c, a);
+   20|      else
+   21|        write(c, b, a);
+   22|end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

@@ -1,0 +1,25 @@
+STRT  NOP          stage2no206 - Your Names(s)
+      RDI I1       read(a)
+      RDI I0       read(x)
+      LDA I3       
+      STA I2       b := 3
+L0    NOP          repeat
+      LDA I1       
+      IAD I2       a + b
+      STA I2       b := T0
+      ISB I0       b > x
+      AMJ L1       
+      AZJ L1       
+      LDA TRUE     
+      UNJ L1  +1   
+L1    LDA FALS     
+      AZJ L0       until
+      PRI I2       write(b)
+      HLT          
+I0    BSS 0001     x
+I1    BSS 0001     a
+I2    BSS 0001     b
+I3    DEC 0003     3
+TRUE  DEC 0001     TRUE
+FALS  DEC 0000     FALSE
+      END STRT     

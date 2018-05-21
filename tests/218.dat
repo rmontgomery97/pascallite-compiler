@@ -1,0 +1,22 @@
+program stage2no218;
+var
+  a, b, c : integer;
+begin
+  read(a, b, c);
+  if (a < b) then
+    if (b < c) then
+      write(a, b, c);
+    else
+      if (a < c) then
+        write(a, c, b);
+      else
+        write(c, a, b);
+  else
+    if (a < c) then
+      write(b, a, c);
+    else
+      if (b < c) then
+        write(b, c, a);
+      else
+        write(c, b, a);
+end.

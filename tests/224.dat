@@ -1,0 +1,13 @@
+program stage2no224;
+var a,b,c:integer;
+    f:boolean;
+begin    
+  read(a,b);
+  f := a < b;
+  c := 0;
+  if f then
+    c := a;
+  else
+    c := b;
+  write(a,b,c);
+end.

@@ -1,0 +1,10 @@
+program stage2no205;
+  var x,y:integer;
+  begin
+    read(x);
+    read(y);
+    while (x > y) do
+      x:=x-3;
+    write(x);
+    write(y);
+  end.

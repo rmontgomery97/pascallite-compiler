@@ -1,0 +1,13 @@
+program stage2no212;  {improper uses of Pascallite features.}
+  var x,y,z:integer;  why:boolean;
+  begin
+    if why then
+	   z:=0;    
+	else 
+	   z := -3; else   {extraneous else}
+	while why do begin;
+	  x := y + 2;
+	  if x = 3 then
+	  end;                       {improper nesting of if statement}
+	else x := y;
+  end.

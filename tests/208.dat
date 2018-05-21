@@ -1,0 +1,18 @@
+program stage2no208; {computes gcd}
+  var a,b,x,y:integer;
+  begin
+    read(x);
+    read(y);
+    if ((x>0) and (y>0)) then {x and y should be positive}
+      begin
+        a:=x;b:=y;
+        repeat
+          while (a > b) do a:=a-b;
+          while (b > a) do b:=b-a;
+        until (a = b);
+        write(x);
+        write(y);
+        write(a);
+        {a = b = gcd(x,y);}
+      end;
+    end.

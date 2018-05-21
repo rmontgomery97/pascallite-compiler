@@ -1,0 +1,12 @@
+program stage2no201;   {needs a lot of temps}  
+  var a,b,c,d,e:integer;
+  begin    
+    read(b);
+    read(c);
+    read(d);
+    read(e);
+    a:=(b+c)+((c+d)+((d+e))) ;    
+    b:= a+c;
+    write(a);
+    write(b);
+  end.

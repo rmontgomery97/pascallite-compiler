@@ -1,0 +1,11 @@
+STRT  NOP          stage2no230 - Your Names(s)
+L0    NOP          while
+      LDA B0       
+      AZJ L1       do
+      UNJ L0       end while
+L1    NOP          
+      PRI I0       write(month)
+      HLT          
+I0    DEC 0012     month
+B0    DEC 0001     true
+      END STRT     

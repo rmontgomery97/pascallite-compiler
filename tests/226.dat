@@ -1,0 +1,14 @@
+program stage2no226;
+var a:integer;
+    f:boolean;
+begin    
+  a := 0;
+  f := a < 10;
+  while f do
+    begin
+      a := a + 1;
+      write(a,f);      
+      f := a < 10;
+    end;
+  write(a,f);      
+end.

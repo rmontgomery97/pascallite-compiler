@@ -1,0 +1,17 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  3 09:08:51 2009
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no206;
+    2|  var x,a,b:integer;
+    3|  begin
+    4|    read(a);
+    5|    read(x);
+    6|    b := 3;
+    7|    repeat
+    8|      b:=a+b;
+    9|    until(b>x);
+   10|    write(b);
+   11|  end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

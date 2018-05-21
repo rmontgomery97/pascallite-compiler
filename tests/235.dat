@@ -1,0 +1,9 @@
+program stage2no235;
+var t:integer;
+begin    
+  t := 0;
+  repeat
+    t := 1;
+    write(t);
+  until t; {predicate of until must be of type boolean}
+end.

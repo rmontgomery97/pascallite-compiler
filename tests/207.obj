@@ -1,0 +1,50 @@
+STRT  NOP          stage2no207 - Your Names(s)
+      RDI I0       read(x)
+      RDI I2       read(a)
+      RDI I1       read(y)
+      RDI I3       read(b)
+      LDA I0       
+      ISB I2       x > a
+      AMJ L0       
+      AZJ L0       
+      LDA TRUE     
+      UNJ L0  +1   
+L0    LDA FALS     
+      AZJ L1       if false jump to L1
+      LDA I1       
+      ISB I3       y < b
+      AMJ L2       
+      LDA FALS     
+      UNJ L2  +1   
+L2    LDA TRUE     
+      AZJ L3       if false jump to L3
+      LDA I2       
+      IAD I3       a + b
+      STA I4       c := T0
+      LDA I1       
+      IAD I6       y + 2
+      STA I5       d := T0
+      UNJ L4       jump to end if
+L3    NOP          else
+      LDA I7       
+      STA I4       c := 1
+L4    NOP          end if
+L1    NOP          end if
+      LDA I1       
+      IAD I8       y + 3
+      STA I5       d := T0
+      PRI I4       write(c)
+      PRI I5       write(d)
+      HLT          
+I0    BSS 0001     x
+I1    BSS 0001     y
+I2    BSS 0001     a
+I3    BSS 0001     b
+I4    BSS 0001     c
+I5    BSS 0001     d
+TRUE  DEC 0001     TRUE
+FALS  DEC 0000     FALSE
+I6    DEC 0002     2
+I7    DEC 0001     1
+I8    DEC 0003     3
+      END STRT     

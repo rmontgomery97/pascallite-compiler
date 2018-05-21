@@ -1,0 +1,79 @@
+STRT  NOP          stage2no218 - Your Names(s)
+      RDI I0       read(a)
+      RDI I1       read(b)
+      RDI I2       read(c)
+      LDA I0       
+      ISB I1       a < b
+      AMJ L0       
+      LDA FALS     
+      UNJ L0  +1   
+L0    LDA TRUE     
+      AZJ L1       if false jump to L1
+      LDA I1       
+      ISB I2       b < c
+      AMJ L2       
+      LDA FALS     
+      UNJ L2  +1   
+L2    LDA TRUE     
+      AZJ L3       if false jump to L3
+      PRI I0       write(a)
+      PRI I1       write(b)
+      PRI I2       write(c)
+      UNJ L4       jump to end if
+L3    NOP          else
+      LDA I0       
+      ISB I2       a < c
+      AMJ L5       
+      LDA FALS     
+      UNJ L5  +1   
+L5    LDA TRUE     
+      AZJ L6       if false jump to L6
+      PRI I0       write(a)
+      PRI I2       write(c)
+      PRI I1       write(b)
+      UNJ L7       jump to end if
+L6    NOP          else
+      PRI I2       write(c)
+      PRI I0       write(a)
+      PRI I1       write(b)
+L7    NOP          end if
+L4    NOP          end if
+      UNJ L8       jump to end if
+L1    NOP          else
+      LDA I0       
+      ISB I2       a < c
+      AMJ L9       
+      LDA FALS     
+      UNJ L9  +1   
+L9    LDA TRUE     
+      AZJ L10      if false jump to L10
+      PRI I1       write(b)
+      PRI I0       write(a)
+      PRI I2       write(c)
+      UNJ L11      jump to end if
+L10   NOP          else
+      LDA I1       
+      ISB I2       b < c
+      AMJ L12      
+      LDA FALS     
+      UNJ L12 +1   
+L12   LDA TRUE     
+      AZJ L13      if false jump to L13
+      PRI I1       write(b)
+      PRI I2       write(c)
+      PRI I0       write(a)
+      UNJ L14      jump to end if
+L13   NOP          else
+      PRI I2       write(c)
+      PRI I1       write(b)
+      PRI I0       write(a)
+L14   NOP          end if
+L11   NOP          end if
+L8    NOP          end if
+      HLT          
+I0    BSS 0001     a
+I1    BSS 0001     b
+I2    BSS 0001     c
+FALS  DEC 0000     FALSE
+TRUE  DEC 0001     TRUE
+      END STRT     

@@ -1,0 +1,13 @@
+program stage2no214;  {improper uses of Pascallite features.}
+  var x,y,z:integer;  why:boolean;
+  begin
+    x := 24;
+	if x > 0 then   {then clause may not be empty}
+	else d:=4;
+    
+	else ;          {can use mull statement, though}
+ 
+    begin;
+  	    if x = 3 then; end;  {improper nesting}
+	  else x := y;
+  end.

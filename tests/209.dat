@@ -1,0 +1,11 @@
+program  stage2no209;      
+         {demonstrates correct usage of Pascallite features} 
+  var   a,b,c,
+        d :integer;  
+  begin    
+    a := 3;    
+    d := a+b  *  c;    
+    b := a*b+c ;    
+    a := a+b+c;    
+    d := a*b*c;    d := a+b; 
+end.

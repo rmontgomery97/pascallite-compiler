@@ -1,0 +1,10 @@
+program stage2no228;
+var a:integer;
+begin    
+  a := 0;
+  if false then
+    ;
+  else
+    a := 1;
+  write(a);
+end.

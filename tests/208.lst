@@ -1,0 +1,24 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  2 10:05:31 2010
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no208; {computes gcd}
+    2|  var a,b,x,y:integer;
+    3|  begin
+    4|    read(x);
+    5|    read(y);
+    6|    if ((x>0) and (y>0)) then {x and y should be positive}
+    7|      begin
+    8|        a:=x;b:=y;
+    9|        repeat
+   10|          while (a > b) do a:=a-b;
+   11|          while (b > a) do b:=b-a;
+   12|        until (a = b);
+   13|        write(x);
+   14|        write(y);
+   15|        write(a);
+   16|        {a = b = gcd(x,y);}
+   17|      end;
+   18|    end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

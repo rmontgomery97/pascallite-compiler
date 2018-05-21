@@ -1,0 +1,19 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  3 09:08:51 2009
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no203;
+    2|  var x,y,a :integer;
+    3|  begin
+    4|    read(x);
+    5|    read(y);
+    6|    if (x<y) then
+    7|      a := x+3;
+    8|    else
+    9|      a := y+5;
+   10|    write(x);
+   11|    write(y);
+   12|    write(a);
+   13|  end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

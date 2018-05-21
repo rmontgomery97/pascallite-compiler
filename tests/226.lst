@@ -1,0 +1,20 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  2 10:05:31 2010
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no226;
+    2|var a:integer;
+    3|    f:boolean;
+    4|begin    
+    5|  a := 0;
+    6|  f := a < 10;
+    7|  while f do
+    8|    begin
+    9|      a := a + 1;
+   10|      write(a,f);      
+   11|      f := a < 10;
+   12|    end;
+   13|  write(a,f);      
+   14|end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

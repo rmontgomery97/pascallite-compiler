@@ -1,0 +1,24 @@
+program stage2no225;
+var a,b,gcd:integer;
+begin    
+  read(a,b);
+
+  if a < 0 then
+    a := a * -1;
+
+  if b < 0 then
+    b := b * -1;
+
+  if a < b then
+    gcd := a;
+  else
+    gcd := b;
+
+  while (a mod gcd <> 0) or (b mod gcd <> 0) do
+    begin
+      gcd := gcd - 1;
+      write(gcd);
+    end;
+
+  write(a,b,gcd);
+end.

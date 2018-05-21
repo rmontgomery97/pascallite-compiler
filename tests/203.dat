@@ -1,0 +1,13 @@
+program stage2no203;
+  var x,y,a :integer;
+  begin
+    read(x);
+    read(y);
+    if (x<y) then
+      a := x+3;
+    else
+      a := y+5;
+    write(x);
+    write(y);
+    write(a);
+  end.

@@ -1,0 +1,74 @@
+STRT  NOP          stage2no208 - Your Names(s)
+      RDI I2       read(x)
+      RDI I3       read(y)
+      LDA I2       
+      ISB I4       x > 0
+      AMJ L0       
+      AZJ L0       
+      LDA TRUE     
+      UNJ L0  +1   
+L0    LDA FALS     
+      STA T0       deassign AReg
+      LDA I3       
+      ISB I4       y > 0
+      AMJ L1       
+      AZJ L1       
+      LDA TRUE     
+      UNJ L1  +1   
+L1    LDA FALS     
+      IMU T0       T0 and T1
+      AZJ L2       if false jump to L2
+      LDA I2       
+      STA I0       a := x
+      LDA I3       
+      STA I1       b := y
+L3    NOP          repeat
+L4    NOP          while
+      LDA I0       
+      ISB I1       a > b
+      AMJ L5       
+      AZJ L5       
+      LDA TRUE     
+      UNJ L5  +1   
+L5    LDA FALS     
+      AZJ L6       do
+      LDA I0       
+      ISB I1       a - b
+      STA I0       a := T0
+      UNJ L4       end while
+L6    NOP          
+L7    NOP          while
+      LDA I1       
+      ISB I0       b > a
+      AMJ L8       
+      AZJ L8       
+      LDA TRUE     
+      UNJ L8  +1   
+L8    LDA FALS     
+      AZJ L9       do
+      LDA I1       
+      ISB I0       b - a
+      STA I1       b := T0
+      UNJ L7       end while
+L9    NOP          
+      LDA I0       
+      ISB I1       a = b
+      AZJ L10      
+      LDA FALS     
+      UNJ L10 +1   
+L10   LDA TRUE     
+      AZJ L3       until
+      PRI I2       write(x)
+      PRI I3       write(y)
+      PRI I0       write(a)
+L2    NOP          end if
+      HLT          
+I0    BSS 0001     a
+I1    BSS 0001     b
+I2    BSS 0001     x
+I3    BSS 0001     y
+I4    DEC 0000     0
+TRUE  DEC 0001     TRUE
+FALS  DEC 0000     FALSE
+T0    BSS 0001     T0
+      END STRT     

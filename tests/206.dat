@@ -1,0 +1,11 @@
+program stage2no206;
+  var x,a,b:integer;
+  begin
+    read(a);
+    read(x);
+    b := 3;
+    repeat
+      b:=a+b;
+    until(b>x);
+    write(b);
+  end.

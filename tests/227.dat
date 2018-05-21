@@ -1,0 +1,9 @@
+program stage2no227;
+var a:integer;
+begin    
+
+  a := 1;
+  if true then
+    a := 2;
+  write(a);
+end.

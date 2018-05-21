@@ -1,0 +1,30 @@
+STAGE2:  YOUR NAME(S)       Thu Dec  2 10:05:31 2010
+
+LINE NO.              SOURCE STATEMENT
+
+    1|program stage2no225;
+    2|var a,b,gcd:integer;
+    3|begin    
+    4|  read(a,b);
+    5|
+    6|  if a < 0 then
+    7|    a := a * -1;
+    8|
+    9|  if b < 0 then
+   10|    b := b * -1;
+   11|
+   12|  if a < b then
+   13|    gcd := a;
+   14|  else
+   15|    gcd := b;
+   16|
+   17|  while (a mod gcd <> 0) or (b mod gcd <> 0) do
+   18|    begin
+   19|      gcd := gcd - 1;
+   20|      write(gcd);
+   21|    end;
+   22|
+   23|  write(a,b,gcd);
+   24|end.
+
+COMPILATION TERMINATED      0 ERRORS ENCOUNTERED

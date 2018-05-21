@@ -1,0 +1,36 @@
+STRT  NOP          stage2no226 - Your Names(s)
+      LDA I1       
+      STA I0       a := 0
+      ISB I2       a < 10
+      AMJ L0       
+      LDA FALS     
+      UNJ L0  +1   
+L0    LDA TRUE     
+      STA B0       f := T0
+L1    NOP          while
+      LDA B0       
+      AZJ L2       do
+      LDA I0       
+      IAD I3       a + 1
+      STA I0       a := T0
+      PRI I0       write(a)
+      PRI B0       write(f)
+      ISB I2       a < 10
+      AMJ L3       
+      LDA FALS     
+      UNJ L3  +1   
+L3    LDA TRUE     
+      STA B0       f := T0
+      UNJ L1       end while
+L2    NOP          
+      PRI I0       write(a)
+      PRI B0       write(f)
+      HLT          
+I0    BSS 0001     a
+B0    BSS 0001     f
+I1    DEC 0000     0
+I2    DEC 0010     10
+FALS  DEC 0000     FALSE
+TRUE  DEC 0001     TRUE
+I3    DEC 0001     1
+      END STRT     

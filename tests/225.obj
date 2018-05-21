@@ -1,0 +1,80 @@
+STRT  NOP          stage2no225 - Your Names(s)
+      RDI I0       read(a)
+      RDI I1       read(b)
+      LDA I0       
+      ISB I3       a < 0
+      AMJ L0       
+      LDA FALS     
+      UNJ L0  +1   
+L0    LDA TRUE     
+      AZJ L1       if false jump to L1
+      LDA I0       
+      IMU I4       a * -1
+      STA I0       a := T0
+L1    NOP          end if
+      LDA I1       
+      ISB I3       b < 0
+      AMJ L2       
+      LDA FALS     
+      UNJ L2  +1   
+L2    LDA TRUE     
+      AZJ L3       if false jump to L3
+      LDA I1       
+      IMU I4       b * -1
+      STA I1       b := T0
+L3    NOP          end if
+      LDA I0       
+      ISB I1       a < b
+      AMJ L4       
+      LDA FALS     
+      UNJ L4  +1   
+L4    LDA TRUE     
+      AZJ L5       if false jump to L5
+      LDA I0       
+      STA I2       gcd := a
+      UNJ L6       jump to end if
+L5    NOP          else
+      LDA I1       
+      STA I2       gcd := b
+L6    NOP          end if
+L7    NOP          while
+      LDA I0       
+      IDV I2       a mod gcd
+      STQ T0       store remainder in memory
+      LDA T0       load remainder from memory
+      ISB I3       T0 <> 0
+      AZJ L8  +1   
+L8    LDA TRUE     
+      STA T0       deassign AReg
+      LDA I1       
+      IDV I2       b mod gcd
+      STQ T1       store remainder in memory
+      LDA T1       load remainder from memory
+      ISB I3       T1 <> 0
+      AZJ L9  +1   
+L9    LDA TRUE     
+      IAD T0       T0 or T1
+      AZJ L10 +1   
+L10   LDA TRUE     
+      AZJ L11      do
+      LDA I2       
+      ISB I5       gcd - 1
+      STA I2       gcd := T0
+      PRI I2       write(gcd)
+      UNJ L7       end while
+L11   NOP          
+      PRI I0       write(a)
+      PRI I1       write(b)
+      PRI I2       write(gcd)
+      HLT          
+I0    BSS 0001     a
+I1    BSS 0001     b
+I2    BSS 0001     gcd
+I3    DEC 0000     0
+FALS  DEC 0000     FALSE
+TRUE  DEC 0001     TRUE
+T0    BSS 0001     T0
+I4    DEC -001     -1
+T1    BSS 0001     T1
+I5    DEC 0001     1
+      END STRT     

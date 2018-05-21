@@ -1,0 +1,10 @@
+program stage2no202;
+  var y,z:integer;
+  begin
+    read(y);
+    while (y < 10) do
+      y:=y+1;
+    z:=y+1;
+    write(y);
+    write(z);
+  end.
